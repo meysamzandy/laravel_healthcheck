@@ -62,7 +62,7 @@ abstract class BaseChecker implements Checker, \JsonSerializable
     public function getResponse() : array
     {
         return [
-            'is_healthful' => $this->isHealthful(),
+            'status' => $this->isHealthful(),
             'message' => $this->getMessage()
         ];
     }

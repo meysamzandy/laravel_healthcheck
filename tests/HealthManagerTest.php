@@ -26,7 +26,7 @@ class HealthManagerTest extends TestCase
 
         $status = $healthManager->getHealthStatus();
 
-        self::assertTrue($status['fake']->getResponse()['is_healthful']);
+        self::assertTrue($status['fake']->getResponse()['status']);
         self::assertNull($status['fake']->getResponse()['message']);
     }
 
@@ -49,7 +49,7 @@ class HealthManagerTest extends TestCase
 
         $status = $healthManager->getHealthStatus();
 
-        self::assertFalse($status['fake']->getResponse()['is_healthful']);
+        self::assertFalse($status['fake']->getResponse()['status']);
         self::assertSame($status['fake']->getResponse()['message'], 'unhealthy');
     }
 
