@@ -1,5 +1,5 @@
 {
-    "name": "meysam-znd/laravel_healthcheck",
+    "name": "meysam-znd/laravel_healthchecker",
     "description": "By using this package you can monitor the health of your application",
     "homepage": "https://github.com/meysamzandy/laravel_healthcheck",
     "license": "MIT",
@@ -17,7 +17,7 @@
         "laravel"
     ],
     "require": {
-        "php": "^7.4 || ^8.0",
+        "php": "^7.4",
         "laravel/framework": "^8.22.1 || ^9.3.0"
     },
     "require-dev": {
