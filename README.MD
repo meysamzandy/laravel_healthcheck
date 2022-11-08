@@ -9,7 +9,7 @@
 ## Install
 
 ```shell script
-composer require meysam-znd/laravel_healthcheck
+composer require meysam-znd/laravel_health_check
 ```
 
 ## Usage
