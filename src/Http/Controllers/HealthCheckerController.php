@@ -13,12 +13,12 @@ class HealthCheckerController
                 ->getHealthStatus();
 
             return response()->json([
-                'status' => 'UP',
+                'status' => true,
                 'health_status' => $healthManager
             ], 200);
         } catch (\Exception $exception) {
             return response()->json([
-                'status' => 'DOWN',
+                'status' => false,
                 'error' => $exception->getMessage()
             ], 500);
         }
@@ -27,22 +27,18 @@ class HealthCheckerController
     public function show(string $checker)
     {
         try {
-
             $healthManager = \HealthChecker::oneLoader(config('health-checker'), $checker)
                 ->getHealthStatus();
-
-            return response()->json([
-                'status' => 'UP',
-                'health_status' => $healthManager
-            ]);
+            return response()->json(
+                $healthManager[$checker]);
         } catch (CheckerNotFoundException $exception) {
             return response()->json([
-                'status' => 'DOWN',
+                'status' => false,
                 'error' => $exception->getMessage()
             ], 400);
         } catch (\Exception $exception) {
             return response()->json([
-                'status' => 'DOWN',
+                'status' => false,
                 'error' => $exception->getMessage()
             ], 500);
         }
