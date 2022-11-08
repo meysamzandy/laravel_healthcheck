@@ -35,29 +35,29 @@ The response for both cases will be like that:
 
 ```
 {
-    status => UP
+    status => false
     health_status: [
         {
             cache: {
-                is_healthful: true,
+                status: true,
                 message: null
             }
         },
         {
             database: {
-                is_healthful: true,
+                status: true,
                 message: null
             }
         },
         {
             directory-permission: {
-                is_healthful: false,
+                status: false,
                 message: "The directory /application/public/../storage/ is not writable."
             }
         },
         {
             queue: {
-                is_healthful: true,
+                status: true,
                 message: null
             }
         }
