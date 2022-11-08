@@ -1,4 +1,4 @@
-# Laravel Health Checker
+# Laravel Health Check
 
 ## Version Compatibility
 
