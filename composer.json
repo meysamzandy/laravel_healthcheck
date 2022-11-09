@@ -1,5 +1,5 @@
 {
-    "name": "meysam-znd/laravel9_health_check",
+    "name": "meysam-znd/laravel_health_check",
     "description": "By using this package you can monitor the health of your application",
     "homepage": "https://github.com/meysamzandy/laravel_healthcheck",
     "license": "MIT",
