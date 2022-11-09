@@ -11,7 +11,11 @@
 ```shell script
 composer require meysam-znd/laravel_health_check
 ```
+## Publish Config
+```
+php artisan vendor:publish --provider="Laravel\Health\Providers\HealthServiceProvider"
 
+```
 ## Usage
 Edit the config file `config/health-checker.php` see the comments there for more information
 
